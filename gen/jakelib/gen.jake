@@ -331,9 +331,11 @@ namespace('gen', function () {
 	  if(!modelPath){
 		_modelPath = 'resource'
 	  }
-      modelPath = 'coffee/' + _modelPath ;  	  
+      _modelPath = 'coffee/' + _modelPath ;  	  
 	  opts.ext = 'coffee';
     }
+	
+	modelPath = _modelPath;
 
     _writeTemplate(name, modelPath, path.join('app', 'models'), opts);
 
